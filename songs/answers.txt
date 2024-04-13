@@ -1,0 +1,5 @@
+I would characterize their audio aura as moderate energetic, very dancing, with
+a lot of movement, and not quite much valence.
+
+It would be more accurate if we took a weighted average for the audio aura instead
+taking regular average, perhaps it would get less outlier results and assumptions.

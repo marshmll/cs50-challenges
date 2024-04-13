@@ -1,0 +1,16 @@
+sort1 uses: Bubble Sort.
+
+How do you know?: On the best case (which is the sorted numbers, because all numbers are in order),
+the sort1 algorithm has a good time efficiency (1.6s). However, in the worst case (which is the
+reversed number, because all numbers are out of order) the sort1 algorithm has a dramatic time increase (5.5s).
+This matches the Big O notation for the Bubble Sort Algorithm, which has Ω(n) for the best case, and O(n²) for the worst case.
+
+sort2 uses: Merge Sort.
+
+How do you know?: The sort2 algorithm is the fastest beetween all. It has a constant average time of 1.5s, which matches
+the Merge Sort time complexity (Θ(nlogn)).
+
+sort3 uses: Selection Sort.
+
+How do you know?: Sort3 algorithm has a slightly better efficiency than the sort1 algorithm. Nonetheess, it has a constant
+time complexity for all cases, even though it might be the worst of the three (Θ(n²)).

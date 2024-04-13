@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            window.onload = () => {
+                let responseButtons = document.querySelectorAll('.question-1-button');
+                let correctnessTextContainer = document.querySelector('.correctness-text#question-1');
+
+                responseButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        if (button.id == 'response-4') {
+                            correctnessTextContainer.innerText = 'Correct!';
+                            correctnessTextContainer.classList.remove('incorrect');
+                            correctnessTextContainer.classList.add('correct');
+                        }
+                        else {
+                            correctnessTextContainer.innerText = 'Incorrect!';
+                            correctnessTextContainer.classList.remove('correct');
+                            correctnessTextContainer.classList.add('incorrect');
+                        }
+                    })
+                });
+
+                let questionTwoForm = document.querySelector('#question-2-form');
+
+                questionTwoForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    let response = document.querySelector('#question-2-input').value;
+                    let correctnessTextContainer = document.querySelector('.correctness-text#question-2');
+
+                    if (response == 'CS50') {
+                        correctnessTextContainer.innerText = 'Correct!';
+                        correctnessTextContainer.classList.remove('incorrect');
+                        correctnessTextContainer.classList.add('correct');
+                    }
+                    else {
+                        correctnessTextContainer.innerText = 'Incorrect!';
+                        correctnessTextContainer.classList.remove('correct');
+                        correctnessTextContainer.classList.add('incorrect');
+                    }
+                })
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <div class='correctness-text' id="question-1"></div>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>In which book "Rubber Duck Debugging" was created?</h3>
+                <div>
+                    <button class="question-1-button" id="response-1">Clean Code (R. Martin)</button>
+                    <button class="question-1-button" id="response-2">The Clean Coder (R. Martin)</button>
+                    <button class="question-1-button" id="response-3">The Mythical Man-Month (F. Brooks)</button>
+                    <button class="question-1-button" id="response-4">The Pragmatic Programmer (A. Hunt & D.
+                        Thomas)</button>
+                    <button class="question-1-button" id="response-5">Refactoring (Martin Fowler)</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the best Computer Science course ever?</h3>
+                <div class="correctness-text" id="question-2"></div>
+                <form id="question-2-form">
+                    <input type="text" id="question-2-input">
+                    <button type="submit">Check</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
